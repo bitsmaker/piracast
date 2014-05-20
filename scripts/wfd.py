@@ -125,7 +125,7 @@ def p2p_peer_devaddr_get():
     print 'p2p_peer_devaddr_get:'
     output = get_stdout(["iwpriv", "wlan0", "p2p_get", "peer_deva"])
     match = re.search(r'\n(.*)$', output)
-    mac = '%s%s:%s%s:%s%s:%s%s:%s%s:%s%s' % match.group(1)[0:11]
+    mac = ':'.join(match.group(1)[i : i + 2] for i in range(0, 12, 2))
     #mac = match.group(1)[0] + match.group(1)[1] + ':' \
     #    + match.group(1)[2] + match.group(1)[3] + ':' \
     #    + match.group(1)[4] + match.group(1)[5] + ':' \
