@@ -27,3 +27,6 @@ Copyright 2013
 ### To run Piracast:
     1. cd scripts
     2. sudo python piracast.py
+    
+### When connecting from Android device
+    1. Got to settings->display->cast display->choose "Piracast" 
